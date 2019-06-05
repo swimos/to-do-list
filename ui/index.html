@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Swim To-Do List Demo</title>
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="assets/favicon_x128.png">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/fonts.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+  <!-- javascript -->
+  <script src="assets/js/lib/swim-core.js"></script>
+  <script src="assets/js/lib/swim-ui.js"></script>
+  <script src="assets/js/lib/swim-ux.js"></script>
+  <script src="assets/js/lib/default.js"></script>
+  <script src="assets/js/todo.js"></script>
+
+  <!-- body -->
+
+  <body class="page" onload="start()">
+
+    <!-- header -->
+    <header class="main-header container-fluid">
+      <div class="row">
+        <div class="col col-8 content-left">
+          <picture><img src="http://cdn.swim.ai/images/logos/new-swim-logo.png" height="64px" alt="Swim Logo"></picture>
+          <div class="main-title">
+            <h1>To-Do list Example</h1>
+          </div>
+        </div>
+        <div class="col col-4 text-right content-right">
+          <picture class="d-none d-sm-inline">
+            <img src="http://cdn.swim.ai/images/powerBySWIM-AI-top-default.svg" height="33px" alt="Power by SWIM.ai Logo">
+          </picture>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main class="main">
+
+      <!-- To-do card -->
+      <div class="card text-white bg-primary border-light mb-3" style="max-width: 20rem; margin: 2rem auto;">
+        <!-- to-do list section -->
+        <div class="card-body">
+          <!-- title -->
+          <h4 class="card-title">Things to-do:</h4>
+          <!-- To-do list container -->
+          <ul id="mainList" class="list-group"></ul>
+        </div>
+        <!-- /to-do list section -->
+
+        <!-- to-do input form section -->
+        <div class="card-header btn-group">
+          <!-- text field -->
+          <input type="text" id="textInput" class="form-control" style="border-radius: 0.25rem 0 0 0.25rem"
+            placeholder="Enter new item" maxlength="254">
+          <!-- remove button -->
+          <input type="button" value="Add" onclick="handleAdd()" class="btn btn-secondary">
+        </div>
+        <!-- /to-do input form section -->
+
+      </div>
+    </main>
+    <!-- /main -->
+
+  </body>
+
+</html>

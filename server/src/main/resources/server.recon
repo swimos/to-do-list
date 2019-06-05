@@ -1,0 +1,16 @@
+@server {
+  @plane("todo") {
+    class: "swim.todo.TodoPlane"
+  }
+  @store {
+    path: "/tmp/swim"
+  }
+  @http(port: 9001) {
+    plane: "todo"
+    documentRoot: '../ui/'
+    @websocket {
+      serverCompressionLevel: 0
+      clientCompressionLevel: 0
+    }
+  }
+}
