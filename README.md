@@ -1,6 +1,6 @@
 # To-do List Example
 
-<img align="right" src="https://github.com/swimit/new-todo-list/blob/master/ui/assets/images/list-screenshot.png" alt="To-do List Screenshot" width="35%">
+<img align="right" src="https://github.com/swimos/to-do-list/blob/master/ui/assets/images/list-screenshot.png" alt="To-do List Screenshot" width="35%">
 
 This is a small and focused sample  application to demonstrating how to implement and use two specific types of lanes inside Swim. The application itself is an extremely simple to-do list which allows users to add and remove items from a to-do list via a web page. The web UI is also hosted by swim and uses vanilla javascript along with the Swim javascript client to get data from the server.
 
