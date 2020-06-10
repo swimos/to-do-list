@@ -1,16 +1,12 @@
-@server {
-  @plane("todo") {
-    class: "swim.todo.TodoPlane"
-  }
-  @store {
-    path: "/tmp/swim"
-  }
-  @http(port: 9001) {
-    plane: "todo"
-    documentRoot: '../ui/'
-    @websocket {
-      serverCompressionLevel: 0
-      clientCompressionLevel: 0
-    }
+todo: @fabric {
+  @plane(class: "swim.todo.TodoPlane")
+}
+
+@web(port: 9001) {
+  space: "todo"
+  documentRoot: "../ui/html"
+  @websocket {
+    serverCompressionLevel: 0# -1 = default; 0 = off; 1-9 = deflate level
+    clientCompressionLevel: 0# -1 = default; 0 = off; 1-9 = deflate level
   }
 }

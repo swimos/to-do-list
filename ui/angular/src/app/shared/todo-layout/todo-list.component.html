@@ -1,0 +1,10 @@
+<ul class="todo-list unstyled">
+  <li *ngFor="let item of todos | todoStatus:filter" #parentElem [ngClass]="{'todo-form': true, 'completed': item.completed, 'edit': item.editing}" (dblclick)="onEdit(parentElem, item);">
+    <input class="checkbox" type="checkbox" [name]="'item#'+item.key" [(ngModel)]="item.completed" (click)="onCompleted(item.key, item.completed)">
+    <div class="view">
+      <label [for]="'item#'+item.key">{{item.label}}</label>
+      <i class="material-icons" (click)="removeItem(item.key)">clear</i>
+      <input class="input-edit" type="text" placeholder="Change Label" maxlength="254" [(ngModel)]="item.editLabel" [hidden]="item.editing" #editedInput (keyup.enter)="editedInput.blur()" (blur)="onBlur(item, editedInput.value)">
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,287 @@
+/* You can add global styles to this file, and also import other style files */
+/* ========================
+   Global
+   ======================== */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 1rem 0;
+}
+
+.unstyled li {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ========================
+    Header
+    ======================== */
+.swim-logo {
+  height: 62px;
+  margin-bottom: 1rem;
+}
+
+.swim-logo img {
+  height: 100%;
+}
+
+/* ========================
+    Footer
+    ======================== */
+.main-footer {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-size: 0.8125rem;
+  color: #aaa;
+}
+
+.main-footer .copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ========================
+    Todo
+    ======================== */
+.todo-wrap {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border: 1px solid #efefef;
+}
+
+.todo-wrap .title {
+  margin-bottom: 0.5rem;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.form-input {
+  flex-grow: 2;
+  border: 1px solid #ccc;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+}
+
+.filter {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.filter li {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.filter a, .filter a:visited {
+  font-size: 0.8125rem;
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.filter a:hover, .filter a.active {
+  color: #000;
+  transition: color 350ms ease-in-out;
+}
+
+.todo-list {
+  max-height: 475px;
+  overflow-y: auto;
+}
+
+.todo-list .view {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  padding: 0.5rem 0;
+}
+
+.todo-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #efefef;
+}
+
+.todo-list li:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+}
+
+.todo-list li:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0.95rem;
+  width: 8px;
+  height: 15px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(35deg) translate( -3px, 0);
+  opacity: 0;
+}
+
+.todo-list li.completed:after {
+  opacity: 1;
+  transition: opacity 350ms ease-in-out;
+}
+
+.todo-list li.msg {
+  justify-content: center;
+}
+
+.todo-list li.msg:before, .todo-list li.msg:after {
+  display: none;
+}
+
+.todo-list .checkbox {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 40px;
+  height: 25px;
+  margin: auto 0.5rem auto 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0;
+}
+
+.view label {
+  position: relative;
+}
+
+.todo-list li.completed .view label {
+  color: #aaa;
+  text-decoration: line-through;
+  transition: color 350ms ease-in-out;
+}
+
+.todo-list li .input-edit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.todo-list li.edit .input-edit {
+  display: block;
+}
+
+.todo-list li i {
+  display: none;
+  font-size: 1.3rem;
+  align-self: flex-end;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.todo-list li:hover i {
+  display: block;
+}
+
+/* ========================
+    Dark Theme
+    ======================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1e1e1e;
+    color: #909090;
+  }
+
+  h2 {
+    color: #a0a6a6;
+  }
+
+  .todo-wrap {
+    background: rgba(12,17,18, 0.5);
+    border: 0;
+  }
+
+  .todo-header {
+    border-color: rgba(151,151,151, 0.3);
+  }
+
+  .form-input {
+    border-color: rgba(151,151,151, 0.3);
+  }
+
+  .form-input input {
+    color: #909090;
+  }
+
+  .filter a, .filter a:visited {
+    color: rgba(255,255,255,0.3);
+  }
+  
+  .filter a:hover, .filter a.active {
+    color: #a0a6a6;
+  }
+
+  .todo-list li {
+    border-top-color: rgba(151,151,151, 0.3);
+  }
+
+  .todo-list li:before {
+    border-color: rgba(151,151,151, 0.3);
+  }
+  
+  .todo-list li:after {
+    border-color: #909090;
+  }
+
+  .todo-list li.completed .view label {
+    color: #a0a6a6;
+  }
+
+  .todo-list li.edit .input-edit {
+    border-color:rgba(151,151,151, 0.3);
+    background: rgba(12,17,18);
+    color: #909090;
+  }
+
+  .main-footer {
+    color: rgba(255,255,255,0.3);
+  }
+}

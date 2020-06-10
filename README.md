@@ -1,6 +1,6 @@
 # To-do List Example
 
-<img align="right" src="https://github.com/swimos/to-do-list/blob/master/ui/assets/images/list-screenshot.png" alt="To-do List Screenshot" width="35%">
+<img align="right" src="https://github.com/swimos/to-do-list/blob/master/assets/list-screenshot.png" alt="To-do List Screenshot" width="35%">
 
 This is a small and focused sample  application to demonstrating how to implement and use two specific types of lanes inside Swim. The application itself is an extremely simple to-do list which allows users to add and remove items from a to-do list via a web page. The web UI is also hosted by swim and uses vanilla javascript along with the Swim javascript client to get data from the server.
 
@@ -11,16 +11,19 @@ It is possible to allow for more then one to-do list (and ListAgent) by changing
 The ListAgent itself consists of 3 lanes. First there is a MapLane which will hold all the list items. In this example, the map lane is keyed using a timestamp. This ensures the list will always show up in the same order for all users. Next are 2 command lanes. The first command lane is for adding new list items and likewise the second command lane is for removing list items.
 
 
-In the UI, `ui/assets/js/todo.js` does most the of work. It sets up a Map downlink to the 'list' lane inside the ListAgent for that list. Next it has a simple method for rendering teh list onto the page. There are 2 methods to handle the click of the add and remove buttons. Finally there are 2 methods which send commands into Swim to add and remove list items. Anytime the list changes it will get re-rendered.
+In the UI, `ui/html/assets/js/todo.js` does most the of work. It sets up a Map downlink to the 'list' lane inside the ListAgent for that list. Next it has a simple method for rendering teh list onto the page. There are 2 methods to handle the click of the add and remove buttons. Finally there are 2 methods which send commands into Swim to add and remove list items. Anytime the list changes it will get re-rendered.
 
+# Swim with UI framewrork
 
+For more example todo application using Swim with UI framework. Example include: HTML with Swim UI, Angular, Reactjs, Vue 
 
+[Read More](https://github.com/swimos/to-do-list/tree/master/ui)
 
 ## Setup, Build, and Run:
 
 You need java9+ to run the application and these instructions only cover running in a unix like environment. Gradle is not required as the project provides a gradle wrapper to use instead.
 
-1. `git clone https://github.com/swimit/new-todo-list.git`
+1. `git clone https://github.com/swimos/to-do-list.git`
 
 2. `cd todo-list/server`
 

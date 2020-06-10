@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Todo - Swim</title>
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="//cdn.swim.ai/images/favicon/favicon_x128.png" />
+
+  <!-- Google fonts library -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i|Material+Icons" rel="stylesheet">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+  <!-- javascript -->
+  <script src="https://cdn.swimos.org/js/latest/swim-system.js"></script>
+  <script src="assets/js/lib/default.js"></script>
+  <script src="assets/js/todo.js"></script>
+
+  <!-- body -->
+
+  <body class="page" onload="start()">
+
+    <!-- header -->
+    <header class="main-header container-fluid">
+      <div class="row">
+        <div class="col col-8 content-left">
+          <img src="//cdn.swim.ai/images/logos/swim-marlin-logo-white.svg" alt="Swim marlin logo" height="62px">
+          <div class="main-title">
+            <h1>To-Do list Example</h1>
+          </div>
+        </div>
+        <div class="col col-4 text-right content-right">
+          <picture class="d-none d-sm-inline">
+            <img src="http://cdn.swim.ai/images/powerBySWIM-AI-top-default.svg" height="33px" alt="Power by SWIM.ai Logo">
+          </picture>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main class="main">
+
+      <!-- To-do card -->
+      <div class="card text-white bg-primary border-light mb-3" style="max-width: 20rem; margin: 2rem auto;">
+        <!-- to-do list section -->
+        <div class="card-body">
+          <!-- title -->
+          <h4 class="card-title">Things to-do:</h4>
+          <!-- To-do list container -->
+          <ul id="mainList" class="list-group"></ul>
+        </div>
+        <!-- /to-do list section -->
+
+        <!-- to-do input form section -->
+        <div class="card-header btn-group">
+          <!-- text field -->
+          <input type="text" id="textInput" class="form-control" style="border-radius: 0.25rem 0 0 0.25rem"
+            placeholder="Enter new item" maxlength="254">
+          <!-- remove button -->
+          <input type="button" value="Add" onclick="handleAdd()" class="btn btn-secondary">
+        </div>
+        <!-- /to-do input form section -->
+
+      </div>
+    </main>
+    <!-- /main -->
+
+    <script type="text/javascript">
+      if (navigator.userAgent.indexOf("Chrome") != -1 || navigator.userAgent.indexOf("Firefox") != -1 ) {
+        var e = ["%c Created by SWIM team at SWIM.AI Inc. %c @SWIM.ai %c www.swim.ai", "display:block; padding:5px; background: #4171B8; color:#fff;", "display:block; padding:5px; background: #6ccbf4; color:#fff;", "display:block; padding:5px;"];
+        console.info.apply(console, e)
+      }
+    </script>
+  </body>
+
+</html>

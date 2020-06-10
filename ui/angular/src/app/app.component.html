@@ -1,0 +1,20 @@
+<main class="container">
+  <layout-header></layout-header>
+  <section class="todo-wrap">
+    <h2 class="title">Angular - Todo List</h2>
+    <div class="todo-header">
+      <todo-add></todo-add>
+
+      <ul class="filter unstyled">
+        <li><a [routerLink]="''" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}">All</a></li>
+        <li><a [routerLink]="'active'" routerLinkActive="active">Active</a></li>
+        <li><a [routerLink]="'completed'" routerLinkActive="active">Completed</a></li>
+      </ul>  
+    </div>
+    
+    <router-outlet></router-outlet>
+  </section>
+
+  <layout-footer></layout-footer>
+</main>
